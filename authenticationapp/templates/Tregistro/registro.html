@@ -1,0 +1,22 @@
+{% extends 'miWebSiteapp/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="post" action="" style="color: white;">
+
+    {% csrf_token %}
+
+    <div style="width: 75%; margin: auto;">
+
+        {{form|crispy}}
+
+        <button type="submit" class="btn btn-succes" style="background-color: rgb(19, 240, 19);">Registrate</button>
+        
+     </div>
+</form>
+
+{% endblock %}
